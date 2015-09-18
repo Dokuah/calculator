@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 import java.lang.*;
 
-public class numero{
+public class Calculator{
 	public static void Add(int num1, int num2){
 		int result = num1 + num2;
 		System.out.println("The sum is " + result);
@@ -38,6 +38,11 @@ public class numero{
 		System.out.println("The mod is " + result);
 	}
 
+	public static void Average(int num1, int num2){
+		float result = (num1 + num2) / 2;
+		System.out.println("The Average is " + result);
+	}
+
 	public static void main(String[] args) {
 		int option;
 		Scanner in = new Scanner(System.in);
@@ -51,6 +56,7 @@ public class numero{
 		System.out.println("5- SquareRoot");
 		System.out.println("6- Power");
 		System.out.println("7- Mod");
+		System.out.println("8- Average");
 		option = Integer.parseInt(in.nextLine());
 
 		if (option==1){
@@ -112,7 +118,7 @@ public class numero{
 		Power(f1,f2);
 	}
 
-		else {
+		else if (option==7){
 			int f1,f2;
 			System.out.println("Enter first number");
 		f1 = Integer.parseInt(in.nextLine());
@@ -120,6 +126,16 @@ public class numero{
 			System.out.println("Enter second number");
 		f2 = Integer.parseInt(in.nextLine());
 		Mod(f1,f2);
+		}	
+
+		else {
+			int f1,f2;
+			System.out.println("Enter first number");
+		f1 = Integer.parseInt(in.nextLine());
+			
+			System.out.println("Enter second number");
+		f2 = Integer.parseInt(in.nextLine());
+		Average(f1,f2);
 
 		}
 
